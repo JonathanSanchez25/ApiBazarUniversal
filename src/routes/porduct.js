@@ -19,7 +19,7 @@ router.get("/product", (req, res) => {
 // get all products por title, marca o category  que tengan semenjanzas o incluyan la palabra
 router.get("/product/find", (req, res) => {
     const {title} = req.query;
-    productSchema.find(or = [{title: {$regex: title, $options: 'i'}}, {marca: {$regex: title, $options: 'i'}}, {category: {$regex: title, $options: 'i'}}])
+    productSchema.find(or = [{title: {$regex: title, $options: 'i'}}, {brand: {$regex: title, $options: 'i'}}, {category: {$regex: title, $options: 'i'}}])
         .then((products) => {
             res.status(200).json(products);
         })
