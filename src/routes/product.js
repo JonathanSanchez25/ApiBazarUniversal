@@ -26,6 +26,8 @@ router.get("/product/find", (req, res) => {
         .catch((error) => {
             res.status(400).json(error);
         });
+}
+);
 
 //get por id product
 router.get("/product/:id", (req, res) => {
@@ -40,5 +42,4 @@ router.get("/product/:id", (req, res) => {
 });
 
 module.exports = router;
-
 
